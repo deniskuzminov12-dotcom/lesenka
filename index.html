@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#14083a">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Лесенка">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icons/icon-192.png">
+<title>Лесенка</title><link rel="stylesheet" href="style.css"></head>
+<body><div id="app">
+<header><div class="bal">🪙 <b id="bal">0</b></div><div><button id="vib">📳</button><button id="snd">🔊</button></div></header>
+<div class="note">Игра не предполагает реальных ставок и выигрышей</div>
+<main><canvas id="cv"></canvas><div id="toast"></div></main>
+<section id="panel">
+<div class="row"><button id="half">½</button><input id="bet" type="number" inputmode="numeric" min="1" value="10"><button id="dbl">×2</button></div>
+<div class="row"><button data-b="10">10</button><button data-b="50">50</button><button data-b="100">100</button><button data-b="500">500</button></div>
+<div class="lbl">Ряды камней</div><div class="seg" id="rows"></div>
+<div class="lbl">Риск</div><div class="seg" id="risk"></div>
+<div class="row"><button id="drop">Бросить</button><input id="autoN" type="number" inputmode="numeric" value="10"><button id="auto">Авто</button></div>
+<button id="refill" hidden>Пополнить 1000 монет</button>
+<div class="stats" id="stats"></div>
+<details><summary>История (20)</summary><div id="log"></div></details>
+</section></div>
+<script src="js/multipliers.js"></script>
+<script src="js/game.js"></script>
+<script>if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{})</script>
+</body></html>
